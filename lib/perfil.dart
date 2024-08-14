@@ -1,3 +1,4 @@
+import 'package:aplicativo_barbearia/reserva.dart';
 import 'package:flutter/material.dart';
 
 class PerfilPage extends StatefulWidget {
@@ -171,7 +172,12 @@ class _PerfilPageState extends State<PerfilPage> {
                       ),
                       SizedBox(height: 20.0),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ReservaPage()),
+                          );
+                        },
                         style: ButtonStyle(
                           backgroundColor: MaterialStatePropertyAll(Colors.deepPurple),
                         ),
